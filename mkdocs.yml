@@ -1,0 +1,24 @@
+site_name: CodeForge
+site_url: https://github.com/aerobic35get-alt/codeforge-site.git
+site_author: Твое Имя
+site_description: Мои наработки и инструкции для начинающих разработчиков
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: blue
+    accent: indigo
+
+nav:
+  - Главная: index.md
+  - С чего начать: getting-started.md
+  - Примеры кода: examples/
+  - Частые ошибки: errors/
+  - О себе: about.md
+  - Контакты: contact.md
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
