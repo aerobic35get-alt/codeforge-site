@@ -1,14 +1,23 @@
 site_name: CodeForge
-site_url: https://github.com/aerobic35get-alt/codeforge-site.git
+site_url: https://username.github.io/codeforge/  # <-- обязательно вставь свою ссылку
 site_author: Твое Имя
-site_description: Мои наработки и инструкции для начинающих разработчиков
+site_description: Мои наработки и пошаговые инструкции для начинающих разработчиков
 
 theme:
   name: material
   palette:
-    scheme: default
-    primary: blue
-    accent: indigo
+    scheme: default       # светлая тема по умолчанию
+    primary: blue         # основной цвет — спокойный синий (вызывает доверие)
+    accent: indigo        # акцентный цвет — чуть ярче, для кнопок и заголовков
+  font:
+    text: Roboto          # современный читаемый шрифт
+    code: Consolas        # моноширинный шрифт для кода — чистый и аккуратный
+  features:
+    - navigation.tabs     # вкладки в шапке (удобно на мобильных)
+    - navigation.top      # кнопка «Наверх»
+    - toc.integrate       # оглавление встраивается прямо в контент
+    - search.highlight    # подсветка слов поиска в тексте
+    - search.share        # кнопки поделиться результатами поиска
 
 nav:
   - Главная: index.md
@@ -19,6 +28,19 @@ nav:
   - Контакты: contact.md
 
 markdown_extensions:
-  - pymdownx.highlight
-  - pymdownx.superfences
-  - admonition
+  - admonition              # для блоков warning/tip/danger
+  - codehilite:
+      guess_lang: false     # отключаем угадывание языка — лучше указывать явно
+      use_pygments: true    # красивая подсветка кода через PyGments
+  - pymdownx.highlight      # улучшенная подсветка
+  - pymdownx.superfences   # расширенные блоки кода
+  - toc:
+      permalink: true       # якоря у заголовков — можно кидать ссылки прямо на раздел
+  - attr_list               # чтобы добавлять классы и стили к элементам
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/username
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/твой_ник
